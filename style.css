@@ -1,0 +1,406 @@
+:root{
+    --White: hsl(0, 0%, 98%);
+    --Gray: hsl(0, 0%, 41%);
+    --Black: hsl(0, 0%, 8%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    font-family: "Epilogue", sans-serif;
+    background-color: var(--White);
+}
+nav{
+    height: 11vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 45px;
+    align-items: center;
+    /* background-color: rgb(124, 124, 124); */
+}
+.navigation-wrapper{
+    /* height: 100%; */
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    /* background-color: yellow; */
+}
+.logo{
+    object-fit: cover;
+}
+ul{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    width: 75%;
+    /* background-color: gold; */
+}
+ul li a{
+    text-decoration: none;
+    color: var(--Gray);
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+ul li a:hover{
+    color: var(--Black);
+}
+.login{
+    width: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+}
+.login a{
+    text-decoration: none;
+    color: var(--Gray);
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+.login a:hover{
+    color: var(--Black);
+}
+.login button{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--Black);
+    border: 1.6px solid var(--Black);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 18px;
+}
+.login button:hover{
+    background-color: var(--Black);
+    color: var(--White);
+}
+main{
+    height: 89vh;
+    width: 100%;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding:0 8%; */
+}
+.left{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 60%;
+    padding-left: 8%;
+}
+.left h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    width: 80%;
+    /* margin-top: 20px; */
+    letter-spacing: -1px;
+    line-height: -.2;
+    /* background-color: red; */
+}
+.left p{
+    width: 80%;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--Gray);
+    margin-top: 30px;
+    line-height: 1.2;
+    /* background-color: green; */
+}
+.left button{
+    padding: 12px 35px;
+    border-radius: 10px;
+    background-color: var(--Black);
+    color: var(--White);
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.left button:hover{
+    background-color: var(--White);
+    color: var(--Black);
+}
+.left .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 10%;
+    object-fit: cover;
+    /* background-color: red; */
+    margin-top: 10%;
+}
+.left .icons img{
+    /* width: 40px;
+    height: 40px; */
+    object-fit: contain;
+    /* background-color: red; */
+}
+.menu{
+    display: none;
+}
+.right{
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+    /* background-color: green; */
+}
+.right img{
+    width: 70%;
+}
+.toggle{
+    height: 24%;
+    width: 9.5%;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 8.1%;
+    left: 9.3%;
+    padding-right: 15px;
+    display: none;
+}
+.toggle-2{
+    height: 18%;
+    width: 8%;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 8.1%;
+    left: 20%;
+    padding-right: 15px;
+    display: none;  
+}
+.toggle-2 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    list-style: none;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    /* background-color: gold; */
+}
+.toggle ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    list-style: none;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    /* background-color: gold; */
+}
+.side-nav{
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+    display: none;
+}
+.cross{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+}
+.side-nav ul{
+    list-style: none;
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    padding: 50px;
+}
+.side-nav ul li{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-weight: 500;
+    color: var(--Gray);
+    cursor: pointer;
+}
+.side-nav ul li a{
+    gap: 10px;
+    text-decoration: none;
+    color: var(--Gray);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.side-nav ul li:hover{
+    color: var(--Black);
+}
+.login-1{
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+.login-1 a{
+    text-decoration: none;
+    color: var(--Gray);
+    font-weight: 500;
+    width: 100%;
+    height:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-1 a:hover{
+    color: var(--Black);
+}
+.login-1 button{
+    padding: 12px 35px;
+    border-radius: 10px;
+    background-color: var(--White);
+    color: var(--Black);
+    font-weight: 500;
+    font-size: 18px;
+    border: 1.6px solid var(--Black);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.login-1 button:hover{
+    background-color: var(--Black);
+    color: var(--White);
+}
+.login-1:hover{
+    color: var(--Black);
+}
+.side-toggle, .side-toggle-2{
+    display: none;
+}
+.side-toggle ul{
+    padding: 0 30px;
+}
+.side-toggle-2 ul{
+    padding: 0 30px;
+}
+@media only screen and (max-width: 600px) {
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+    nav{
+        width: 100%;
+        height: 10vh;
+        padding: 0 8%;
+    }
+    main{
+        width: 100%;
+        height: 90vh;
+        /* background-color: red; */
+    }
+    ul,.login{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        /* height: auto; */
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+        /* padding:0 8%; */
+    }
+    .right{
+        height: 55%;
+        width: 100%;
+        object-fit: contain;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        /* background-color: green; */
+    }
+    .right img{
+        text-align: center;
+        height: 80%;
+        width: 96%;
+    }
+    .left{
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2%;
+        /* background-color: yellow; */
+    }
+    .left h1{
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+        padding: 0;
+    }
+    .left p{
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .left button{
+        margin-top: 10px;
+    }
+    .left .icons{
+        width: 100%;
+        height: 10%;
+        margin: 4%;
+    }
+}
